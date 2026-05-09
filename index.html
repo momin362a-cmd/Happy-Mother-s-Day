@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Mother's Day | A Little Surprise for Mom</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="intro-running">
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-overlay__content">
+      <p class="intro-kicker">A special surprise for Mom</p>
+
+      <div class="countdown-number" id="countdownNumber">3</div>
+
+      <div class="countdown-popup hidden" id="countdownPopup">
+        <span class="countdown-popup__heart">&#10084;</span>
+        <h2>Happy Mother's Day</h2>
+        <p>May your day feel as soft, beautiful, and loving as the heart you give to everyone else.</p>
+      </div>
+
+      <p class="intro-hint" id="introHint">
+        Tap anywhere during the countdown if you want the music to start with the surprise.
+      </p>
+    </div>
+  </div>
+
+  <div class="page-shell is-pre-reveal" id="pageShell">
+    <div class="background-glow" aria-hidden="true"></div>
+    <div class="background-texture" aria-hidden="true"></div>
+    <div class="petals-container" aria-hidden="true"></div>
+
+    <header class="top-bar">
+      <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">
+        <span class="music-icon">&#9834;</span>
+        <span id="musicToggleLabel">Play Mother's Day music</span>
+      </button>
+    </header>
+
+    <main class="hero" id="hero">
+      <div class="hero-copy reveal">
+        <p class="intro-note">For the woman who made my whole world feel like home</p>
+        <h1 class="hero-title">Happy Mother's Day</h1>
+        <p class="hero-script">My first home, my forever comfort</p>
+        <p class="hero-description" id="introText"></p>
+
+        <div class="hero-actions">
+          <button class="primary-btn" id="openWish" type="button">Open your surprise</button>
+          <button class="secondary-btn" id="heartBurst" type="button">Release hearts</button>
+        </div>
+
+        <p class="helper-text">
+          Made to feel better on a phone, with a short intro first and music that starts after a tap.
+        </p>
+      </div>
+
+      <div class="hero-card reveal delay-2">
+        <div class="card-glow" aria-hidden="true"></div>
+
+        <div class="memory-card">
+          <div class="memory-card-top">
+            <span class="memory-label">A small note from your child</span>
+            <span class="memory-seal">&#10084;</span>
+          </div>
+
+          <h2 class="memory-title" id="previewHeading"></h2>
+          <p class="memory-copy" id="previewWish"></p>
+
+          <div class="memory-highlights">
+            <span id="highlightOne"></span>
+            <span id="highlightTwo"></span>
+            <span id="highlightThree"></span>
+          </div>
+
+          <p class="memory-signoff" id="previewSignoff"></p>
+        </div>
+      </div>
+    </main>
+
+    <section class="wish-panel hidden" id="wishPanel">
+      <div class="wish-content">
+        <div class="message-card panel-animate">
+          <p class="section-tag">A message for you</p>
+          <h2 id="recipientHeading">To my dearest Mom</h2>
+          <p id="mainMessage"></p>
+          <p class="signature" id="signatureText"></p>
+        </div>
+
+        <div class="touch-note panel-animate delay-a">
+          <span>Touch anywhere on the page to send floating hearts.</span>
+        </div>
+
+        <div class="reasons-grid">
+          <article class="reason-card panel-animate delay-b">
+            <span class="reason-number">01</span>
+            <h3 id="reasonOneTitle"></h3>
+            <p id="reasonOneText"></p>
+          </article>
+
+          <article class="reason-card panel-animate delay-c">
+            <span class="reason-number">02</span>
+            <h3 id="reasonTwoTitle"></h3>
+            <p id="reasonTwoText"></p>
+          </article>
+
+          <article class="reason-card panel-animate delay-d">
+            <span class="reason-number">03</span>
+            <h3 id="reasonThreeTitle"></h3>
+            <p id="reasonThreeText"></p>
+          </article>
+        </div>
+
+        <div class="mini-notes panel-animate delay-e">
+          <article class="mini-note">
+            <span class="section-tag">Today</span>
+            <p id="noteOneText"></p>
+          </article>
+
+          <article class="mini-note">
+            <span class="section-tag">Always</span>
+            <p id="noteTwoText"></p>
+          </article>
+        </div>
+
+        <div class="blessing-card panel-animate delay-f">
+          <p class="section-tag">My wish for you today</p>
+          <p id="wishText"></p>
+        </div>
+
+        <div class="final-line panel-animate delay-g">
+          <span>Thank you for every prayer, every hug, and every sacrifice.</span>
+          <strong>Happy Mother's Day.</strong>
+        </div>
+
+        <button class="secondary-btn replay-btn panel-animate delay-h" id="replayBtn" type="button">
+          See the intro again
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
